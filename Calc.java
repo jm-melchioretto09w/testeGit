@@ -12,12 +12,10 @@ public class Calc {
         while (true) {
             String entrada = scanner.nextLine();
 
-            // Condição de saída
             if (entrada.equals("-->")) {
                 break;
             }
 
-            // O split divide a string por espaços
             String[] partes = entrada.split(" ");
 
             if (partes.length < 3) {
@@ -32,23 +30,30 @@ public class Calc {
                 double res = 0;
                 boolean erro = false;
 
-                // O switch no Java funciona de forma similar ao match do Python
                 switch (opt) {
-                    case "+": res = n1 + n2; break;
-                    case "-": res = n1 - n2; break;
-                    case "*": res = n1 * n2; break;
-                    case "/": res = n1 / n2; break;
-                    case "^": res = Math.pow(n1, n2); break;
+                    case "+": 
+                        res = n1 + n2; 
+                        break;
+                    case "-": 
+                        res = n1 - n2; 
+                        break;
+                    case "*": 
+                        res = n1 * n2; 
+                        break;
+                    case "/": 
+                        res = n1 / n2; 
+                        break;
+                    case "^": 
+                        res = Math.pow(n1, n2);
+                        break;
                     default:
                         erro = true;
                         break;
                 }
 
                 if (erro) {
-                    System.out.println(" = ERROR (Operador inválido)");
+                    System.out.println(" = ERROR");
                 } else {
-                    // O Java não apaga a linha anterior tão facilmente quanto o Python no terminal,
-                    // então imprimimos o resultado normalmente.
                     System.out.println(" = " + res);
                 }
 
