@@ -1,5 +1,3 @@
-from collections import deque
-
 print("Seja bem vind@ a minha calculadora:\nInsia as contas completas e espaçadas ex: '5 + 4'")
 
 while True:
